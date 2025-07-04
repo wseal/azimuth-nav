@@ -1,16 +1,9 @@
 "use client";
 
-import { useDebounce } from "@/utils/utils";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { useState } from "react";
 
-export default function TagSelector({
-  tags,
-  onSelectTag,
-}: {
-  tags: string[];
-  onSelectTag: (tag: string) => void;
-}) {
+export default function TagSelector({ tags }: { tags: string[] }) {
   const route = useRouter();
   const path = usePathname();
   const searchParams = useSearchParams() ?? "";
@@ -18,8 +11,7 @@ export default function TagSelector({
 
   const [currTag, setCurrTag] = useState(params.get("tag") ?? "All");
 
-  const handleSelect = useDebounce((term: string) => {
-    const params = new URLSearchParams(searchParams);
+  const handleSelect = (term: string) => {
     if (term) {
       params.set("tag", term);
     } else {
@@ -27,7 +19,7 @@ export default function TagSelector({
     }
 
     route.replace(`${path}?${params.toString()}`);
-  }, 0);
+  };
 
   return (
     <div className="my-2 flex w-full flex-wrap gap-2">
@@ -41,7 +33,6 @@ export default function TagSelector({
             onClick={() => {
               setCurrTag(item);
               handleSelect(item);
-              onSelectTag(item);
             }}
           >
             {item}

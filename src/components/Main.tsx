@@ -2,12 +2,10 @@
 
 import SearchBar from "@/components/SearchBar";
 import TagSelector from "@/components/TagSelector";
-// import NavList, { NavItem } from "@/components/NavList";
 import Card from "@/components/Card";
 
-import { udata } from "@/data/udata";
-// import { useSearchParams } from "next/navigation";
-import { useEffect, useState } from "react";
+import { BookmarkListItem, udata } from "@/data/udata";
+import { useSearchParams } from "next/navigation";
 
 export interface NavItem {
   name: string;
@@ -17,15 +15,24 @@ export interface NavItem {
 }
 
 export default function Main() {
-  //   const searchParams = useSearchParams() ?? "";
-  //   const params = new URLSearchParams(searchParams);
-  //   const tag = params.get("tag") ?? "";
-  //   const q = params.get("q") ?? "";
-  const [navs, setNavs] = useState<NavItem[]>([]);
+  const searchParams = useSearchParams() ?? "";
+  const params = new URLSearchParams(searchParams);
+  const tag = params.get("tag") ?? "";
+  const q = (params.get("q") ?? "").toLowerCase();
 
-  useEffect(() => {
-    onSelectTag("All");
-  }, []);
+  const filter = (list: BookmarkListItem[], q: string) => {
+    if (q.length < 1) {
+      return list;
+    }
+
+    return list.filter((ch) => {
+      return (
+        ch.title.toLowerCase().indexOf(q) > -1 ||
+        ch.url.toLocaleLowerCase().indexOf(q) > -1 ||
+        ch.description.toLowerCase().indexOf(q) > -1
+      );
+    });
+  };
 
   const tags = [
     "All",
@@ -34,86 +41,46 @@ export default function Main() {
     }),
   ];
 
-  //   const tmpNavs: NavItem[] = [];
-  //   udata.forEach((item) => {
-  //     let filter = item.children;
-  //     if (q.length > 0) {
-  //       filter = item.children.filter((ch) => {
-  //         return (
-  //           ch.title.indexOf(q) > -1 ||
-  //           ch.url.indexOf(q) > -1 ||
-  //           ch.description.indexOf(q) > -1
-  //         );
-  //       });
-  //     }
-
-  //     const nv = filter.map((f) => {
-  //       return {
-  //         name: f.title,
-  //         description: f.description,
-  //         url: f.url,
-  //         favicon: f.favicon,
-  //       };
-  //     });
-
-  //     tmpNavs.push(...nv);
-  //   });
-
-  //   setNavs(tmpNavs);
-
-  const onSearch = (q: string) => {
-    const tmpNavs: NavItem[] = [];
-    udata.forEach((item) => {
-      let filter = item.children;
-      if (q.length > 0) {
-        filter = item.children.filter((ch) => {
-          return (
-            ch.title.indexOf(q) > -1 ||
-            ch.url.indexOf(q) > -1 ||
-            ch.description.indexOf(q) > -1
-          );
-        });
+  //
+  const navs: NavItem[] = [];
+  for (const item of udata) {
+    if (tag !== "All" && tag.length > 0) {
+      if (item.name !== tag) {
+        continue;
       }
-      const nv = filter.map((f) => {
+
+      const tmp = filter(item.children, q).map((ch) => {
         return {
-          name: f.title,
-          description: f.description,
-          url: f.url,
-          favicon: f.favicon,
+          name: ch.title,
+          description: ch.description,
+          url: ch.url,
+          favicon: ch.favicon ?? null,
         };
       });
-      tmpNavs.push(...nv);
-    });
-    setNavs(tmpNavs);
-  };
 
-  const onSelectTag = (tag: string) => {
-    const tagNavs: NavItem[] = [];
-    udata.forEach((item) => {
-      if (item.name === tag || tag === "All") {
-        const chs = item.children.map((ch) => {
-          return {
-            name: ch.title,
-            description: ch.description,
-            url: ch.url,
-            favicon: ch.favicon,
-          };
-        });
+      navs.push(...tmp);
+      break;
+    }
 
-        tagNavs.push(...chs);
-      }
+    const tmp = filter(item.children, q).map((ch) => {
+      return {
+        name: ch.title,
+        description: ch.description,
+        url: ch.url,
+        favicon: ch.favicon ?? null,
+      };
     });
 
-    setNavs(tagNavs);
-  };
+    navs.push(...tmp);
+  }
 
   return (
     <>
       <main className="relative mt-4 flex-1 overflow-y-auto px-4 sm:px-6 lg:px-8">
         <div className="dark:bg-dark-900 sticky top-0 bg-gray-100 pb-4">
           <div className="mx-auto flex max-w-5xl flex-col gap-2">
-            <SearchBar onSearch={onSearch} />
-            <TagSelector tags={tags} onSelectTag={onSelectTag} />
+            <SearchBar value={q} />
+            <TagSelector tags={tags} />
             <div className="mt-2 border-t-1 border-gray-500"></div>
           </div>
         </div>

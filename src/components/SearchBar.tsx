@@ -3,16 +3,12 @@
 import { useDebounce } from "@/utils/utils";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 
-export default function SearchBar({
-  onSearch,
-}: {
-  onSearch: (q: string) => void;
-}) {
+export default function SearchBar({ value }: { value: string }) {
   const route = useRouter();
   const path = usePathname();
   const searchParams = useSearchParams() ?? "";
 
-  const handleSearch = useDebounce((term: string) => {
+  const handleSearch = (term: string) => {
     const params = new URLSearchParams(searchParams);
     if (term) {
       params.set("q", term);
@@ -21,8 +17,10 @@ export default function SearchBar({
     }
 
     route.replace(`${path}?${params.toString()}`);
+  };
 
-    onSearch(term);
+  const debunceHandleSearch = useDebounce((term: string) => {
+    handleSearch(term);
   }, 300);
 
   return (
@@ -32,7 +30,7 @@ export default function SearchBar({
         className="dark:bg-dark-300 h-10 w-full rounded-sm border border-white bg-white p-4 text-lg text-[#8a92a6] outline-hidden hover:cursor-pointer hover:border-gray-500 focus:border-gray-500 dark:border-gray-300 dark:text-gray-800"
         type="search"
         placeholder="Please Input To Search "
-        //   defaultValue={}
+        defaultValue={value}
         onChange={(ev) => {
           handleSearch(ev.target.value);
         }}
