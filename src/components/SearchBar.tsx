@@ -29,7 +29,7 @@ export default function SearchBar({ value }: { value: string }) {
         // border-[#f4f5f7] bg-[#f4f5f7]
         className="dark:bg-dark-300 h-10 w-full rounded-sm border border-white bg-white p-4 text-lg text-[#8a92a6] outline-hidden hover:cursor-pointer hover:border-gray-500 focus:border-gray-500 dark:border-gray-300 dark:text-gray-800"
         type="search"
-        placeholder="Please Input To Search "
+        placeholder="Please Input "
         defaultValue={value}
         onChange={(ev) => {
           handleSearch(ev.target.value);

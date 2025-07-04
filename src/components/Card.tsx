@@ -16,6 +16,7 @@ export default function Card({
     <>
       <Link
         href={url}
+        target="_blank"
         className="dark:bg-dark-800 hover:bg-dark-100 dark:hover:bg-dark-800 flex items-center gap-2 rounded-lg border border-white bg-white px-4 py-3 pr-6 shadow-md transition-shadow duration-200 hover:border-gray-400 hover:shadow-md dark:border-gray-800"
       >
         <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-3xl bg-gray-200 dark:bg-gray-300">
@@ -26,7 +27,7 @@ export default function Card({
             {name}
           </h2>
           <p className="truncate text-gray-600 dark:text-gray-300">
-            {name + description}
+            {description}
           </p>
         </div>
       </Link>

@@ -1,0 +1,206 @@
+export interface BookmarkListItem {
+  favicon?: string | null;
+  faviconUri?: string | null;
+  title: string;
+  description: string;
+  url: string;
+  tag: string;
+}
+
+export interface BookmarkList {
+  id: number;
+  name: string;
+  children: BookmarkListItem[];
+}
+
+export const udata = [
+  {
+    id: 151,
+    name: "design",
+    children: [
+      {
+        favicon: "https://www.whats.win/static/favicons/favicon-32x32.png",
+        title: "Azimuth Blog | Web Tech",
+        description: "Next.js | Tailwindcss | And so on",
+        url: "https://www.whats.win/",
+        tag: "blog",
+      },
+      {
+        favicon:
+          "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAACrklEQVQ4jW2TX2jVdRjGP8/3+ztnc7rNnTloGEbURkGQLM3EWWDeJGhgnEKhq2RQeQpUcmNTfhgyjSHYWHYxoosyaiWF5b8KZt3IFNMraUk6GK6E1pzgdrbf7/t6cTadsufu5eV5/zzv+4gSBBgAe7avwbQLtBIjh8yAUeQuQjjEh91n53LELOJ8lqT+M2AD2AnMfiDRIF4pzp4CtxHsVcR3+JG3ifumZqs4Cq9kqG74GaeFTCdb6OwZZD60vdtIJvqSYJPc+ms93SenHBCoevITsBxXbjxPZ88g+bwnjt1MAxHHjnze09kziDu8ClhEdUNvaYX2d5rBnyFNnuHAkb/J5z19fem8E8zmPtj2KJmKS7h0owPfinR0hpydI9DD0D2tPuodRhzF1Cp1vDdsRhuZ3FfEcfIAIY5nSLHdu1Ipjpj+7w2hg6K9MAW6iRhGDAHnCWkf+3uGHui/u2UZ2bLNyDUTbBnYUpnqRHthkoTXcFwjUjOmdRBWEPmrTIcjWJgiGxWYDk8jdwFnZyim55Dq8XwvOgrXwf0PdhnjHGnyC0kYZ0H5BghtmCoh3cNt/yOVVgW2HlMTXssJVuswDchCBJzFaTWZ6ASVC46h5F9C6MdCP6ab1PhvkH5C7kXgN4IZ6HIEdsik46WXDV0k4zfwtc9h/n1kLyMlWKiHpJPRsfPU1SwFW47pccx2eH4fGGbtqkblavZxZ/IloorNpGGCP0cKLFlUB4wwNPY6VeWbWFixF7M3tXhxCxPFz9n/8aelb8uMF2x07BTZqEiafkHk6ml85CRoDUYTj9X8inMNpEkvqGijY6cZtx2A8wD0X0p4NvctZbkm0FuEcBHZFUwvAGWIrwkh4KIW4A9u2Va6u4tz3Xjfzh3b1yG/E7MnhNWBnJn9g3QVWdfDdr4LRjIesK2mdX8AAAAASUVORK5CYII=",
+        title: "Landbook - website design inspiration gallery",
+        description: "",
+        url: "https://land-book.com/",
+        tag: "design",
+      },
+      {
+        favicon:
+          "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAClElEQVQ4jXVTz0tUURg95943T03FH1lpKmYgVFSaaNIiaBGBQWToSBBEi4gUgkSKVjF/QYtq0aZtkJNFLdoUSRBEpIJQm9AK+sk0iumM+ubde78W80aGgc7ufvee833n41wIQERY2H28ZnH/6dYpHPMAQAAW3xdqxWdFQNKd8ealnuHbNVvr3rkt/vuuw42vfx8aOktACEjqwEB/ZuzmrdTHqSoCIomEKghw+eCp9rCs/Hm9V7Zn1YZwEPjU0CQyxl6Gx1+xIEzWDBzxNzoaXpq/6+eqR0ZSkkgoJhKOqd7442odO5OxYY6EhpACcZrUBhIoMlSBqV7r3pVr7u/x15ZXZzLh2vCO0bHPE/G4Zqo3nlVguQgAhc3RREQIECRonaR9hcrBPtvS1uStr2Tnl5ZXhlrGx+f4pzceAtAoBUmIiIiAStGEBp9qfWk60WU72ps9cfYnY95FpnuHv2iizQgkv7OInJ+iMA08pSQb5PgBIUxrva3dVqczmeySJ7TJGP1rRowFoAuNQTLSAQFYEVSW+dLnYvjzdRnZhUXkwuAF053xZvHx1le6NXDWEtAgBSIASRGBIkUA5nVhK5RHB2SrPXdUNcwlf1DkCiFGgwqAhQhBAvlFFnwAAqdAUKAyYe463zycUwlANUw/epp19pImjabSAEwkQuQtEYBVJD0qnTXhjZ0zk/cEiJaVT6RLdQ8O+zHvvgBVxjlDQEfRNYr0NGnXrbvaNJ28G5FFRUtyE4DePjs5ERg7CEiqQnmeAyyA0Ffa02Rmw7jzEVkVrJV+FEXAfe8a6Krwyx5UKr3XAQic+RaY8ELj7JNXhTebcSnNz6adfScbdVXlHRHWrNuN0dbZZ/Ol5P9CUBTpqElxrRj/AHhJQYp37iZmAAAAAElFTkSuQmCC",
+        title: "One Page Love - One Page Website Inspiration and Templates",
+        description:
+          "One Page Love is a One Page website design gallery showcasing the best Single Page websites, templates and resources.",
+        url: "https://onepagelove.com/",
+        tag: "design",
+      },
+      {
+        favicon:
+          "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABYUlEQVQ4jaWTP0uWYRSHr/P4TiIOhuEShBFEg4jRojhGQ4M29gmqxb5HbYEIKWjQBwgF0QgiaOoPOIXQakEQLraIPl4O/V55kLb3TPd9Pb9z7ufcv/vAgFFqAQVYVQJ0GFV11herzWU2eKgv1DV1vsMW1HX1SYfdVFfVZXWkW2DLf7HSYe/DfqrDYc/CvqlDfW0DbAAtMB/hKDAVNg7cjnYOOAU2qqq9KKKOqb/VM/WaOpeTjsKeRvdHPVVvdS6apqoOgXc55S4wDQi8CrujzgBXgC9VtZ/kRq0mop3Y9gC4nwIvgQNgFlgMexsbraq2bzvqVfWveqgeq5/DX6edA/VEnQq/rj5SJy56UTfVNn0+D3ucxFb9qjbqiPo9hfeaOAGwnfUQ8DHsA9AL380LHAUm8/1Gr6rabDaBmVj1KewHsASMAW/S/y/1IXAvOYNFdTf/Gxa1l2XbGbamP4AD/8E5yXQngGYgNnYAAAAASUVORK5CYII=",
+        title: "Sites Of The Month - Awwwards",
+        description:
+          "Sites Of The Month on Awwwards, the awards that recognize the talent and effort of the best web designers, developers and agencies in the world.",
+        url: "https://www.awwwards.com/websites/sites_of_the_month/",
+        tag: "design",
+      },
+      {
+        favicon: "",
+        title: "Inspiring Website Design Examples from Top Brands – Page Flows",
+        description: "",
+        url: "https://pageflows.com/web/products/",
+        tag: "design",
+      },
+      {
+        favicon:
+          "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAC2ElEQVQ4jU2TT2icVRTFz7nvzXyTmY6tlUgrTaBgTXBRFIUipabaVRdKoIi7oKBbRdEWUUKhq+pCXXRjQSLuXCndKNSWtgwiKGg3tigiTTYJpUlmOn+++d67p4s0mLu7i3MW55wfsXUEIACY++y/F0KwBUJzgE1BImh3QL/u1fjbq6ef7OzU8OGDpy+s7do3Kj+h2du0sFeeIDkIADRYiPCcNly6OK4a5zpnJnvbLjx+Ya3FcrgUi/YpHw/g7hmQuQgBcAme4bWahWKiiTTsf1+miYXOmcleBCCryo9j0T6Vy36qsvjK4ZadmG3BCJgB3VHGzZWx/XxrkO/2+iqarXmM+osAPuRLXywfYdZPFmIbnjCsnO+eeJSvPfcI/l4t0RsJ+/dE7d8d+cfySIs/3FW/CiBy32knI51vWIy7PVfZSCPAKkPZxc8vr+P3OyPsbQZ+dPIxvfjUBGefKND5Z+i7mkXbx+M3I5HnJIoAIWiQBEgMRiQHUhbWhxnrg0yAqBslgfIsgkejYFNwBwCSwvzhFo/PNCEJrz/fxsszTRycrOHIwQms3Ktwe61kPQLuDkBTcbtR+VZgM/vqeLwdIADPThcYJ2Gcgau3+/jutx5Wuxn1SEhb9UdCy2CYJbNSJr68soFGNL76TBvnf7yHP5dL0ID+2AGZimhyCTSjkq8YwBu0QAEyAyGxW0ouoTdyrA8zxkmoBVMRwSxtLZBGUh1L5JJStWkWCUk0U91AIxEDEY2wYIJE35quzAI9VfcTsWTX3jvwC4CvrNYwgU7AN0au1W5SmSUaBQkCBUkA3GoNk/zitfenb0QAGFWNc4XuHwqN1nwdQ1y62c+X/+rb5lCoR8IdIOGkBau3LA17lwb19tltFgAAR8/fahf15iIZ3hJsT0oZgQ7yIUwWIM+bLv96EMuzv75zqLvT4H+cP/33WAi1BRLHIB0QAFArEjsUvrnywfT1nZoH9DqCrQRnBOQAAAAASUVORK5CYII=",
+        title: "UI/UX Design Inspiration for Apps and Websites — Page Flows",
+        description: "",
+        url: "https://pageflows.com/",
+        tag: "design",
+      },
+      {
+        favicon:
+          "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABOElEQVQ4je2QMUtCYRiFn/fqvZSagdTW2NYvKBQac6vhUpCCEG3hEkVLDQ0NGi1NQZsEwTfUZrtCf6CxqaFFiLSrwjW/t0Ev2OwWneWFh/MeOAf+Jb7ve91QqipSAERUa0lPj4wx4XqpNDP72a8Cu0CIcpPy7LkxZhgFxIOBU0EoR0BFysE3feAk0e5dKHIAdFDmEc6CMPYFXEZ+ByiOHm1OxebGKfsAqrIH9HDtshOLrYA8C7xPVogDGYCnB9MEyG9uEzEgDbzVjWkBLWBt5NlpgGZBms5UC6pKHPgAMhtbflZEFAtjBtABFvK+v8jASYPUFHtdf7zPTW5QAxB1Glhpjvnt+N4BCQbOK8oL6CoiS782SLn2uBuKqEhxFKS1pKenACnXHgYDZwgUENoolTnXXk1V+w/qByeRbfbGeqfMAAAAAElFTkSuQmCC",
+        title: "Open Color",
+        description: "Color scheme for UI design",
+        url: "https://yeun.github.io/open-color/",
+        tag: "design",
+      },
+      {
+        favicon:
+          "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAACr0lEQVQ4jaWTzWucZRTFf/c+79dkMp2RvOk0CfhRocVSgiAFBZUaBRcFFcGdZiF246YLMRQK7eBKcdFaLS4qSHHtH9Ag6kJBoXWhKBUqtkkpMU0ck/l4Z96P57pIigsVBH+rc+HAgcM9ABgouxjIP+m/0TEFCAAE/EvgLhw9VJMvf+rf9QgYr15rpOkUAH4iFV352pKelrc6ksFu8sbC/MJHzxy5Ilpb+e2pRy78+sL9LYCrZ/e/eHhfuEqpq2HlbwU3vl3R7toq9z14vf3G+gkAtaMEnvBszbmHQVppHL4er7eftsvUZ6LN80ATDZpk3T1s/NIUXzU9OqsuPLf3xO1nld5sBOwblr7wMDQxyMOpfJOldNLPDUcUKng/6JpVhZmKt3I0FhdXovq4ytXbQzG7tCfUcDoO6t0+N+OFnyvJebObWaVqDl+p1hqCmFB5cBMxVjjz+VcKMP3Fd0u/5+ViNy9Ou/rgufDAndecUfNmJiDmK5N623TmiCd2iPZu5oP6y+vv3Xs5uNt4+vmVTwD+uMjJRsSjWUYBEhheRBSzoeXJp/hoWebm281gcmt/8sRjtQCgA3oI5Nh55gXODMdUgDMzMAwiGY8+kHH2oQRRaqJ7Wy6ZeWs6G7QCgDOdnb/Zijg3GZL0R1ShIICIOqzYoiw/Q/UeEwnEe3zZy0xVjqt1UOngt9ocn0x4crd1VDDD8spcIWIG3mOGmdnOvYNKB7/2Pg84xztVBSKEgEtidGCNd+9UU5txnEoQHVOvPREVEVUXNGIHdjEwkF7IqVpE0M/oqkItwg1HfHPqxx/enkgGi1UZbkfRK+arbYxlDMvz7fGldV07LQDdj2m1hpQkyMYGpHMI1+lLB39w6VpjE/DZQSluEMUPPT+ePTzy3y8uD/51aP+Jzl8L/l/8CZdVMNvKMsHpAAAAAElFTkSuQmCC",
+        title: "Selection Embed Code - Google Fonts",
+        description:
+          "Making the web more beautiful, fast, and open through great typography",
+        url: "https://fonts.google.com/selection/embed",
+        tag: "design",
+      },
+      {
+        favicon:
+          "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAACs0lEQVQ4jX2TzWtdZRDGfzPvuffk3N7EEASXjWBRzELFnWLpQl2KIEeTtkiVuhFdmaalJHDod9JmI4qgFESbtunxIysFiVLwD9CNCkIUFEGsVmnvx7nnnPcdF9eLUaqznI9nnplnRgAyTL9KkZlrV4Wre0KGBIDV/eWqmdXza/FhADC5kqI5MJNjGRKEW9ipfYN7I/HHdjSTpwB6ZXG5qAaLS+uTW//OFYAzs72HVHTClGkntlu1MZc0HDf6vfMCNtFqHewUJSH4DRH5qA7yoznrHr2QfC7L+4u7xcIXrWaSiEJdQ+3rTzBWXllrfApwbq5+UiJeFOGxscgRgO6gXyB6f2Tmd8dRnPSr4rx5+5iQfLmw3tgazQwwf0k2gI3j6R93hmbzQY88HkfxC2VZPqIOdjp1FpCzC5da7y+syxZAlpmCGIilqTmApXzy+/m11ntlWa06UROxu9RMp0IA3y8lTc1lmA4BhkoA5Ln4kVojMB/ARG5Tk3BdBZqRG89z8RnYrZQZAmB5Lj5puLZTEPhNFf1aFAlOZwBS0P8CGMWCcJ8oEoxv1Er/2aCqCsOeBZj5HwajmAVLB1XVrzt+E4DlfZ233zhodurp3sPDTsM5/9l96Ds2233gtee8reztXoER3dqWq7rux7G8laXWzhE/WhZAtseiHPELT1wb39HQd4NZGbRx8q9LzBSycGbu5stT7farN4rBZlF0Dizmt/+0ncHJuc4dceQuTIyNPfrrze6ho5fb58BEAAwTQWxlb39xsj12vFv4H6q6nJ+ukg82v0N33VM847Rxop24ndc7xdKRi8mJ4ZGJbXumoeP0bPf5uNk8mzSjqU6v/y2CjCfJrl7pfy7r4vCRi+13RrmMnulvnU0zJJye/X3aueQlJBxQ0SoEe7PXq1/PPhz/ZXsxwJ9WR0F/KAphiwAAAABJRU5ErkJggg==",
+        title: "Heroicons",
+        description:
+          "Beautiful hand-crafted SVG icons, by the makers of Tailwind CSS.",
+        url: "https://heroicons.com/",
+        tag: "design",
+      },
+      {
+        favicon:
+          "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAu0lEQVQ4ja2SsQ7CMAxEnyHAQiu+lY2JP+BPGUAMFErN4lZJ6kCQOMlqc72eznZgjga4AAoMVmpck4sXjsFPCA6nwNNKjZPs/BGtCb1qaxLcgQOwyRJ09i2BOCYKvArplvZPYlAlLBkLcMy4DjgBj4xfA3trbeb8dVil4QZbz2gkwLWwLgXOkZFgA1yZYLCLFYDeMegj/ahNNiDRc+dsZ5tpppcxrkbnm9OGRCZTC1J7PUuIY2ql4X8TvAEKgz4r0Ji00AAAAABJRU5ErkJggg==",
+        title: "Beautiful Free Images & Pictures | Unsplash",
+        description:
+          "Beautiful, free images and photos that you can download and use for any project. Better than any royalty free or stock photos.",
+        url: "https://unsplash.com/",
+        tag: "design",
+      },
+      {
+        favicon:
+          "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAADKUlEQVQ4jV2TS2icZRiFz/t+3/dfJlc7EyU1w1i1Y7QtUkcxXtoiNi1FWnGlRpBKbQShdCGCSzeuXHTnIiKoG8WVIHjrKkqstEzQYk2MBtEsLDbTaeb6z/9dXhdpN579OfBweAgAAZDp6ZeLtw1PHJFgq2AUIZSAsZ0AAJKB0CA2a/mN9vn62sImACIAePyRNw4S0weA3KtYI4gAEqB4e8FLAAAoFngvEFLrwbtTFy6dW6T9+1+ZSPV4XSlTzvKu6+c5kiiCURot68AARoxG5hUyq1EwFmmktfd+Y7DVeYiNGjtMrMr9vOt27pjk+dkXVGWirHJn9WvVXfqle8q6a0nvKTXUWwcuqqmxLvdy65ipHI0WZjVCqCqjpJ9neHrfk3TmxCHScQFfLX4qZx7eSxj08cVfW/L8viV65onLcJ7x7g81DMderPO7NROKQQLSKMbirz8iiRL5/soFXB3k9OFPv6HrcnRcnz5fuU8G3uCb9QoKxsELg0AlmqmdXVDanA7B2f7Amx2j16XZGacIGr3UAR4YshoDMLggIh2iJAqWODLe5e8zACglaPcMzR1dkfMffYZXj19GlhqU39bY+aaGI8KDh6/ixXd+we6Z6zLImJgFAKBvPg0RwEQOlHrEsYUwQRIAjgAC2BBUDLAGIIDc7NFM7eyC1ua0C84id6ZSvCYbzSK5YECFDBIAzhJY5RGNZJJvpRQZZZnNLQTJhEjYWsork7J0/HX07r5LjHKYfu5ZVI8dRS45Hth1h5w68hQqk6NinSciCCCZFsimMIEyi86je9CdO0g6b+P2VkvuP3mMfKsnq18v4VBtiuZO7A2brTat/f0zCikhCBqaSf0O7ymkBmPfLQs5j+GLV9D+t0nL5z5B6GUUuj18ubQujRsDWqz/KWms4L0nMK9RrTpfiseGllnrsh/0HWc5JI4QtILr9gFimKEE1noMcoc01oijRHvvN/quWVP/NOq9qTsfWybhA6RUCYUhJqVZMbNJC2yShEmIjTacpjETMQvhDwhOXqq/t0K3dK5V50vR+MisBFuFoAj8T2eSDGFb52bn2rerqx83ANB/sT19aywiT44AAAAASUVORK5CYII=",
+        title:
+          "UI Faces | Free AI-generated avatars for your creative projects",
+        description:
+          "A growing library of free, AI-generated, high-resolution avatars for design mockups, thoughtfully curated and categorized to suit all your creative needs.",
+        url: "https://uifaces.co/",
+        tag: "design",
+      },
+      {
+        favicon:
+          "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABgElEQVQ4ja2TwWoUQRCG/79mZsMGFZlDAoJ4MR4EQQgInoxXnyKPID5IniG+hEeVHDx6E0ERLxrMRcVIdnFm6vPQk81iFkRiNUV3F03V391fWdJWO2n277RX79eqGLCFLUJgKccZCwJhhpTfzg5ffRtOdr05XXux/3B7Z7vdyNk8TN9o6Gtn36h4rewa5dBIXU3fN5oMU14fH8bjT0+fx+320oN7m212Q9q2ZNu2ylCZxz22w1an9N3pjbw1ubZTh61Z1xtNDEgAYISQBBQXMjCAIdXRKxwKQLYdKjdnqf4qBbYJB5IMqC66JSSjFebzEURJXgpfzP6eYKWsf0lwYQXn3+A/KwAYC+FVN/4jUs6ZkRHi9BcTOZHNKTYjSFJZj5AlOEkbYVuRoLUqMizCKlQtwWOfwaSCMuGgiSYTFO++/zx48/W4qiNY6NIZvgsFWmCuSub9/HP18dfRS0u6eX19urd15fIjyUFpYyuj8LbUzpnGCmV6+DA/eval//HkN3EV7Xz/4bRWAAAAAElFTkSuQmCC",
+        title: "Tint and Shade Generator",
+        description:
+          "Easily make tints and shades that match the output of Chrome DevTools, Sass, Less, and PostCSS.",
+        url: "https://maketintsandshades.com/",
+        tag: "design",
+      },
+      {
+        favicon:
+          "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAADn0lEQVQ4jV2Ta0ybZRiG7/d7v0P7AaUcWgbl1AGtYwfHgEEzopnMyOaPdU63zLB4SmQzZvGQMWMyl5i4sR+aaCYacGYa4+IiJLq5KYkaMgGdbom0kYqDMVgRWkpbWij9Tq8/VuPi9eRJ7j/Pjye5boK7EAAsk7dniWj3VJtaPC65DAwY/mtleujP1aFVHZ8CGLz3huA/ZFeJ8N7hHZanaopFftCfQueufIAQdH0dRgFZwt9JqP1+7uNg1HgZQAoAuMzKAPpOPWF97iVvAd9YZVIVnaUiyzqLrehsIZZKrSuCerCe8M9vMTpASB8AMwCOA2DQNZbTUqe3rSuQlfb7Yoa9UBAEnph7f4yzjwYT0BTVvCYXvP8m07Wt3tibA1d2Fq+tPAnAoBCEJsnb+L7cuh4TcgF3/WqQjl1fwPmfE10DvlRoaDw1NrvEXQxGWEsgr4FsPNYtNDU2cauGUue7OvgND1XtILlmQQsn1Hy3jV4btq1euzy9D8BF+6aaW2AGQr6Jx/v/wMje3a1fbHC5pbnFoFbsrJQMFYd4obZ8O00xxnx30snb89n0l0CvdgGXhYPiaUdLXSXTDCwGbr+tKtrRQscnvRzTX1yOxVQq8rS6oW4HJ9zvLLM824Yc7wOyqdLB9MjKl2QfrM5d25405ebosj1fs9W5XyAEjsjs3AUqUran84h04MRrqGnYXMoRjjMYM8BUlTBNAwDOWl3+jm2jq5SaJEJFgato9ZisztK3AFBeEsFxFOTuECJurpoQN5Q7oUIR8izS0mcDI5bC/IrsyhK7oaoEAKgossTk7Hw6Eptu3r/bo6eVdLY1T5y8MXqTV3y3fio8vHetqd5FRYfdUAzdE+25dCw6Ffw8YxsylrZve2b/qT1HjxjhYJBO3vidjJ3pGeJAuF5lZl4Ty4pIaGycuUej+tM5m94olHJeAVALoLbYbH21s+jB4yWBuO4P+FhReSmJz4VUnud7KAxjWp0J21Bha3Z0fau8PlrAe+1bpLCS8LTlrmtvlsvb6+XS5q6qA4I7qOE7/5AWzobwQ/e5d5PxpbMko7IJhPR3W3c+8lDefbijRNXzCb9+3PGwqBkGPlgcUU6UtdEcU77w1ewIvFPnroDhMQAKzfynAuizSHIypCSbo3rKrFBGWy01ROJ4MpycEsy8SAcW/amT4e/PLCjLHQBW/9/Gf9kqgx5aby5+tCGrzAYG/LYyEx5Phy7FDeVDAL/eW+d/ADZBhwDrEd/oAAAAAElFTkSuQmCC",
+        title: "Tints and Shades Generator",
+        description: "",
+        url: "https://tintsshades.netlify.app/",
+        tag: "design",
+      },
+      {
+        favicon:
+          "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAACOklEQVQ4jZ2Tu2tUYRTEf+fbu5tsstGoEV+JIiqoEARRRBFCUNBGKwt7i2hhITa2NoJ/QRSjRSxFUMHKIsEEQQIqpLAQoxg0yiZKQh6be+93xsJdiK9CB04z58xpZgYASUYdS5l60qhBxfyTlEueSx4/plGDmdTTuFupaRCVPFe/PJUkLUZpYs79/bzXGUlZpjyqvyq1NXT249N0JarjYcHonZyTXx/GH3/1MBUwymL7FtOZ9fjlHSG0BwuCIYPTwIIB5FH9hcD5kTcsn73npU+zQKdgFVAG1ggEe3eiB12FbFfRmiLcSMwu2FKmo80JQ+9m4NBVQrXVrdhmylpioKX+YCNqLkFtvdPdEjSyteCrghGhNxSMPiC59khUp7FSxcgWZce6gu70Bt08ErSvBaulkCTG+KLs+ZIwSAz6UEw/zy/LN1zyaOfcuRL95N1cMY+SXFLUTOp+eCwV46l3T2Rezb2xnEwIYcOHaTQ9j6nww5m+g8gKWC0XwYy1RdmT/YnGa7C7CdoDQSCDTYE/wMxAP3MBKBoE+5V3/7K1AzoqyKIAcWvMDUFzYpQK4ltmOv4itwNvc3omIzOO1/VTIVPxSWsJO9WNa9EoVYzHr00nHqDBt9LtCXRsLNqzb6akBK8WxMua3MAiDP/FxqCsnAda/2Bj2Xi6LYmrGzaWizYanYHt60juXyTb3AbZrBuJiab6ALVl2NMcdL8zSduDJQ4DRbPRepRpjeLR/0R5ZZna/qdMv1XzX+v8HXujroOEYhUpAAAAAElFTkSuQmCC",
+        title: "Coolors - The super fast color palettes generator!",
+        description:
+          "Generate or browse beautiful color combinations for your designs.",
+        url: "https://coolors.co/",
+        tag: "design",
+      },
+      {
+        favicon:
+          "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAACW0lEQVQ4jXWTW2jOYRzHv7///hvviNwoUUqEIhGTuNkkKce5mXLjShKJsiRXwkQ5lRsprBSl7GLlUHPhtBY5zTFrI2dN4t37bv7/5/dx8X9fZuV39fT8Ts/zPUhDApgLnHTnSXDywekDnobAKWDhoDob2lgBNAEF/hNpysCvhKPA8MGNERADLaU6h4T+lPDwDf6gBy8MECDJUoA7bUA1EFlpyEFJOyX9kryqqSXS5fsiV50t6R+QGuZjhbdQM9uSxfOsSq6TVmGbBcwmG5+C+/rjsHQ/fq8LIACBBz0wcVnwddsCc1aH8PQ1CR68WGRRLGmjpFhKdaQ15mteXNklKyI1dZpCQI2zpMVTZD9lCCxJEBZZVZU2yaET8P6EsGAPPH8H3wZg+kVYcRVWXXNmXILHH50tewOtt730MtydHnlGE4/e4HUHM5T2dcLy6/wBrb4NGh9mCG8/B+2vskQIFCOkSJJcUpnYxKXKSKUbNKxSKiYIRx3dIgl/6Y9N6pE0deo40ZdX1PVJ2jRZWvhMWntDiiNTxwfp5krTlx9SGmQzJ8olyUxfIzPdkWS5yjRaOUfsaBZjc1JHvTRplDS+WmqvlyaMkLaeFbXTxehcGpUG3BVQU6YxdUL9IVhzGH/5/q8Cuz9DwzF86T7oTwjgaQnJurKQjknaKkhkFu++ILv2RIwZKZlJvXmpdprsQIOIoxBkFbGkM2a2oSzlHNBGmRwSvhfw2y/xWy/w3jwOaSbiLNqBUf8YqqTtE6Xv/NdPEE4Do4c60Qada4Fmh640UAhOwZ1u4DywZGjPb0GhYFcP0NUVAAAAAElFTkSuQmCC",
+        title: "Ionicons: Premium Open Source Icon Pack for Ionic Framework",
+        description:
+          "Ionicons is an open-sourced, and MIT-licensed icon pack. Download our premium designed icons for use in web, iOS, Android, and desktop apps.",
+        url: "https://ionic.io/ionicons",
+        tag: "design",
+      },
+      {
+        favicon:
+          "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAADFElEQVQ4jVWTT0xcVRyFv3vve28GEIZBK8MYQJpJAKud1hhjKsZU64JZoDHOyoq1MdGVbrrRpYlx4dJNVyZUEtdqMiQmtialDVbRamwbqhkRbR1iYV6ZP/DevHt/bgrBszqLc07O5lPs0/T0dMo5d9xae8qJTInIIIBSal0rtai1njPGnF9YWIh2O2rXlEqlXBzH71vnTlonWSeyF9h1RqvQN3o+CIIPK5VKbW+gVCrloig6G3eSF33lyPU4xvo65HsSujzHjlWstz2qWwG32z5Ke18GQfBWpVKpqXK5HGyG4ccGeeepxw9RfDDhiL3MoKnjadk76gRubKT54PsDhLGH75lPstnsGb21tfVcJ45PFgt53j39ChsnznDh4Bs4DNbrw/r9JBbQATfvdlGPNCBY514NG40TnrV2Fhi4XW9z69fLvNCriLav4pkEb+RJlElh4xYMP0thtMVka4nr1b/BuQFJklltRaYE0FoTZAZRDPHDzSKrjVHkzgo7Oks0cRo1dJRDjxU59fLz9Pf2ICI4kac1IjlxwvjYQ4wVxpG+EdIDeYzShP+2ubJW5Npv3dg4wiYdipMFnnniUUQEEclpAK0VP9+osrT8C/3pBtqPWVx7mDDU+M0/yCVLJLeWMX6A73scOzpBKvAB8FCqJiLDhdE8j4wXMOleWiomle4hbjaZvO9TUtWERKbxhg4D0GxvY51DKV3TRqmLoPA8Q7TdxoarHOteZDz4icC3GNNBXEI73CLeaRPHHb67ukKSWIzWixrPO+cZvXFp+TpfX/oR6X6AuXiKhdQR8sMJXV2OKFIkm//goiYr1b9YvvY72phNpdQ5fXBk5LzWej6xlo2wSXK3xmsHlnlz8Aq+crSammbSh8rkWb9T5/OvLhA22gSeN5/JZL5RADMzM4OtVuusUrw0MSAcztS5P91hJzGshj6NIIc/MMSftU3WapsYY75IBcHblUqltgfTvZH3OtbNipBV9xByuwERjFb1wPc/833/o//BtKtyuRzUG43jJMnrVmQKkdw+nC/ieXO+Ut/ux/k/3FJypUO8Bu0AAAAASUVORK5CYII=",
+        title: "Squoosh",
+        description:
+          "Squoosh is the ultimate image optimizer that allows you to compress and compare images with different codecs in your browser.",
+        url: "https://squoosh.app/",
+        tag: "design",
+      },
+      {
+        favicon:
+          "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAACWElEQVQ4jW2TP4tdVRTFf2vff+9pdKIGHyESpkgVESVYCSGMRSzS2PgBTKFgaSGCaCFIJGAflXwDbUQEcSCQImAhiCCCVVCbgUQmOjPv3nvuPcvivfuYqAcOB/Zhrb33WnsLYPuzj15QXV5jzDuEatkAso0kAAxGArslil336YO7b7z3o5759MPnqrr6Lup6kbvexuRsCSgiOH4MBohZo9x1e31Or0RZVR9H0yxy1/UGmii1NZv70arGq0o2YIEA8rJN0dSLivJ6CHZy2+Uyimq/PdLVZ1/0ndfe0vWLVxhtBNPVhkQqc9vngEulYI6NDBm7jkIn6oYT6wracSAk6ihWukwktpCamMRZfUjZxjbLISHg3NYpTj/yOEdDwquKZLTBlFNfm1dCEmcfe4KvX73K+ScXHKSemz9/zyc/3GZWVuAsJAR6WGYg1qHzTy04d/IU99pDtpoZb1+4xEuntzlKPbG2FuA/BNkZgLsP/mTnixtc/vJzfrm/h20uPH2Gdhg2Sf6XYLLu1/17/P7XPvfbI/44eABAUxRkGY7ZW06qrodEE0kZQV0U+F8DtepcxpbBsbZkra4daxFDYnLkeMzYxzEl0FmqDAqkPo8+6Dsdpn6zB4ep56Dv6PPoQLKwJSM6bd+89m0xry/nZZcslU0UqsvS4zhqOSQA5mVFURTuh0FdHi2cYjarx7b9pkykd9TxfMybRW57d3nwsk0PLdNh6nFCEbIQ0TR17rq9IQ3vFn9/dWvv5JWXd0FnbJ+VoixW/WpyJCIIySjA9LZ3ncbXf3vz/Z/+AfJgNaCYWIx5AAAAAElFTkSuQmCC",
+        title: "Domain Names | Buy Domains & Email At Hover.com",
+        description:
+          "Find the perfect domain name for your idea at Hover. All domains come with industry-leading customer support and free WHOIS privacy. Name your passion today!",
+        url: "https://www.hover.com/",
+        tag: "design",
+      },
+      {
+        favicon:
+          "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAACAklEQVQ4jZVSMWvCYBC9y/dJNB0dHBw6N8Fi2yngIE4uDl39C9VB/4TgLHRxUAvi1EUwiiji4iLWxeBqquDkYk1N/JLrkFJc+7Z7vOMd7x4SEfwHHAC63W6/37+5ublcLojIGBNCAADn3PM8IgqFQqfTKZvN5nI5DgCGYTw9PSWTyXA4bNs257zdbgNAPp8XQiiKcj6fF4tFr9f7XVAURdd1VVXH47Gu65FIZLFYIOLDw8P39/dsNstkMrIsr9drAJAAwPd913VbrVapVHp5eTkej67rXi6Xr6+vQqFQLpdbrZbrur7v/y5wzg+Hw263Mwzj/v7esixZlmVZ3mw2mqYZhrHf7w+HA+ccAICIyuXyer2mKzQajWazec2YplkqlYiIA4AQol6v393dEZHneZzz0WgU8EIIxhgimqYZRIdEtFqtJpOJoijv7++3t7ePj4+e5wEAY2w+n2+32+fnZ9u20+m0pmlw7VupVIbD4TUzGAyq1eo1wwHA87zA2rZtIcTb21s8HgeA3W4XjUZPp5MQIjiVMcYBIPgu5xwRiSiZTBaLRSKq1WqWZSFikA8i/lYDEYNBkiRETCQSr6+vRKSq6ufnJ2PsWsODZIMKOo6zXC5jsZgkSQDw8fGxXC4dx/nTYHBDAEmSptNpp9NRFOWvfLZt5/P5VCrl+35ggv+t9w/+I1vPZAJ5HQAAAABJRU5ErkJggg==",
+        title:
+          "Premium Bootstrap Themes and Templates: Download @ Creative Tim",
+        description:
+          "UI Kits, Templates and Dashboards built on top of Vue.js, React, Angular, Node.js and Laravel. Join over 2,735,103+ creatives to access all our products!",
+        url: "https://www.creative-tim.com/",
+        tag: "design",
+      },
+    ],
+  },
+  {
+    id: 72,
+    name: "free music",
+    children: [
+      {
+        favicon:
+          "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAfUlEQVQ4jWM89z9Gf9WaJRcYyABhITEGjBWrGf6rqCmSo5/hzq37DCzIAsl69/BqmHtJCUOMiRQbsVnAgkUdVptwuY4kF9DEAKxewOXcgQ1EmAHJevdQ5IdYIFLFBTD///8uyMDAwMDAWLGa4T8DAwMDqRnqzq37EAMozc4AeOQuAOl9ov0AAAAASUVORK5CYII=",
+        title: "Royalty Free Music by Bensound | Stock Music",
+        description: "",
+        url: "https://www.bensound.com/",
+        tag: "free music",
+      },
+    ],
+  },
+  {
+    id: 73,
+    name: "blog",
+    children: [
+      {
+        favicon: "https://www.whats.win/static/favicons/favicon-32x32.png",
+        title: "Azimuth Blog | Web Tech",
+        description: "Next.js | Tailwindcss | And so on",
+        url: "https://www.whats.win/",
+        tag: "blog",
+      },
+    ],
+  },
+];
