@@ -1,6 +1,6 @@
 "use client";
 
-import { useDebounce } from "@/utils/utils";
+// import { useDebounce } from "@/utils/utils";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 
 export default function SearchBar({ value }: { value: string }) {
@@ -19,9 +19,9 @@ export default function SearchBar({ value }: { value: string }) {
     route.replace(`${path}?${params.toString()}`);
   };
 
-  const debunceHandleSearch = useDebounce((term: string) => {
-    handleSearch(term);
-  }, 300);
+  // const debunceHandleSearch = useDebounce((term: string) => {
+  //   handleSearch(term);
+  // }, 300);
 
   return (
     <div className="my-2">
