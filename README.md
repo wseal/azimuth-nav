@@ -1,6 +1,6 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-It's a navigation page for bookmark replacement.
+It's a navigation page for bookmark replacement. [online live](https://azimuth-nav.netlify.app)
 
 ## Getting Started
 
@@ -14,6 +14,16 @@ yarn dev
 pnpm dev
 # or
 bun dev
+```
+
+## Test
+
+```
+pnpm run build
+
+pnpm install http-server
+
+http-server ./out
 ```
 
 ## Deploy on Vercel
