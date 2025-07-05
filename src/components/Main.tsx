@@ -2,17 +2,10 @@
 
 import SearchBar from "@/components/SearchBar";
 import TagSelector from "@/components/TagSelector";
-import Card from "@/components/Card";
+import Card, { CardProps } from "@/components/Card";
 
 import { BookmarkListItem, udata } from "@/data/udata";
 import { useSearchParams } from "next/navigation";
-
-export interface NavItem {
-  name: string;
-  description: string;
-  url: string;
-  favicon: string | null;
-}
 
 export default function Main() {
   const searchParams = useSearchParams() ?? "";
@@ -42,7 +35,7 @@ export default function Main() {
   ];
 
   //
-  const navs: NavItem[] = [];
+  const navs: CardProps[] = [];
   for (const item of udata) {
     if (tag !== "All" && tag.length > 0) {
       if (item.name !== tag) {
@@ -89,11 +82,7 @@ export default function Main() {
           {navs.map((item, index) => (
             <Card
               key={index}
-              favicon={
-                item.favicon && item.favicon?.length > 0
-                  ? item.favicon
-                  : "https://github.githubassets.com/favicons/favicon.svg"
-              }
+              favicon={item.favicon}
               url={item.url}
               name={item.name}
               description={item.description}

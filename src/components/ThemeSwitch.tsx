@@ -10,14 +10,14 @@ export default function ThemeSwitch() {
     <>
       <button
         onClick={() => {
-          console.log("theme---->", theme);
           setTheme(theme == "dark" ? "light" : "dark");
         }}
+        aria-label="Theme Switch"
       >
         {theme == "dark" ? (
-          <Sun className="h-[1.2rem] w-[1.2rem] rotate-0  transition-all dark:fill-white dark:stroke-white" />
+          <Sun className="h-[1.2rem] w-[1.2rem] rotate-0 transition-all dark:fill-white dark:stroke-white" />
         ) : (
-          <Moon className="h-[1.2rem] w-[1.2rem] transition-all fill-black" />
+          <Moon className="h-[1.2rem] w-[1.2rem] fill-black transition-all" />
         )}
       </button>
     </>
